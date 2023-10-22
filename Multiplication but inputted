@@ -4,13 +4,15 @@
 int main()
 {
     int n1,t,i;
+    int x = 1;
 
     printf("Enter a number: ");
     scanf("%d",&i);
 
-    for(n1=1;n1<=10;n1++){
-        t=n1*i;
+    while(x <= 10){
+        t=x*i;
         printf("%d * %d = %d\n",i,n1,t);
+        x++;
 
     }
 
