@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+
+int main(){
+
+    char array1[100];
+    char array2[100];
+    int count;
+    int size;
+
+
+    printf("Enter total number of elements: ");
+    scanf("%d", &size);
+
+    for (int i = 0; i < size; i++){
+        printf("Element #%d: ", i+1);
+        scanf("%s", &array1[i]);
+    }
+
+    for (int i = 0; i < size; i++){
+        if(array1[i] == 'a' || array1[i] == 'e' || array1[i] == 'i' || array1[i] == 'o' || array1[i] == 'u'){
+            array2[count] = array1[i];
+            count++;
+        }
+    }
+
+    for (int i = 0; i < size; i++){
+        if(array1[i] != 'a' && array1[i] != 'e' && array1[i] != 'i' && array1[i] != 'o' && array1[i] != 'u'){
+            array2[count] = array1[i];
+            count++;
+        }
+    }
+    printf("\nArranged Elements:\n");
+    for (int i = 0; i < size; i++){
+        printf("Element #%d: %c\n",i+1, array2[i]);
+    }
+
+    return 0;
+    
+}
