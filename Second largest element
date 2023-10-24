@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+
+int main(){
+    
+    int array1[100];
+    int size;
+    int greatest;
+    int second_g;
+   
+
+
+    
+    printf("Enter the number of elements: ");
+    scanf("%d", &size);
+    printf("Enter the elements: ");
+    
+    for(int i = 0; i < size; i++){
+        scanf("%d", &array1[i]);
+    }
+    greatest = array1[0];
+    second_g = array1[0];
+    
+    for(int i = 1; i < size; i++){
+        if (array1[i] > greatest){
+            second_g = greatest;
+            greatest = array1[i];
+        }
+        else if(array1[i] > second_g && array1[i] != greatest){
+            second_g = array1[i];
+        }
+    }
+
+    printf("Second greatest element is %d", second_g);
+    
+        
+    return 0;
+}
