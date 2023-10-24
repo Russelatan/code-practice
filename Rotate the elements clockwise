@@ -25,6 +25,12 @@ int main(){
 
     printf("Enter total number of turns: ");
     scanf("%d", &rotate);
+
+    if (rotate > size + 1){
+        while(rotate > size + 1){
+            rotate = rotate - (size + 1);
+        }
+    }
     
 
 
