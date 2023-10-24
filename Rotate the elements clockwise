@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+int main(){
+
+    int size;
+    int limit1,limit2,turn;
+    int count = 0;
+    int rotate;
+
+    printf("Enter total amount of elements: ");
+    scanf("%d", &size);
+
+    size = size - 1;
+    
+    int array1[size];
+    int array2[size];
+    
+
+
+    printf("Enter the elements: ");
+
+    for(int i = 0; i <= size; i++){      //input the array
+        scanf("%d", &array1[i]);
+    }
+
+    printf("Enter total number of turns: ");
+    scanf("%d", &rotate);
+    
+
+
+    turn = size - rotate;
+    limit1 = turn + 1;
+    limit2 = turn;
+
+    
+    for(int i = limit1; i <= size; i++){      //rotate the elements
+        array2[count] = array1[i];
+        count++;
+    }
+    
+    
+    
+    for(int i = 0; i <= limit2; i++){      //rotate the elements
+        array2[count] = array1[i];
+        count++;
+    }
+
+    printf("Rotated elements: ");
+    
+    for(int i = 0; i <= size; i++){      //display rotated elements
+        printf("%d ", array2[i]);
+    }
+    
+
+
+
+
+
+    return 0;
+}
